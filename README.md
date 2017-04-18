@@ -1,4 +1,4 @@
-# Rps Crud
+# RPS CRUD
 
 ## Standard Workflow
 
@@ -11,12 +11,26 @@
  1. Click Publish. Verify that your branch is now visible on your fork at GitHub.com in the "Branch" dropdown.
  1. **Commit and Sync often as you work.**
  1. Make new branches freely to experiment. You can always switch back to an older branch and start over. **When in doubt, create a branch**, _especially_ before starting on a new task.
- 1. Run `rails grade` as often as you like to see how you are doing.
- 1. You can push commits and `rails grade` right up until the due date.
+ 1. This project does **NOT** have `rails grade` functionality.
  1. If you have a question about your code, a great way to get feedback is to open a [Pull Request](https://help.github.com/articles/creating-a-pull-request/). After creating it, if you include the URL of your Pull Request when you post your question, reviewers will be able to easily see the changes you've made and leave comments on each line of your code with suggestions.
 
 ## Project Specific Setup
 
 1. `cd` into the folder you downloaded.
 1. `bundle install` (or `bundle` for short)
-1. `rails server` (or `rails s` for short)
+<!-- 1. `rails server` (or `rails s` for short) -->
+
+
+## Project Details
+1.  In this project we will extend the rps_rcav project by creating a database table (or what is referred to as a *model* in Rails) to save each round of play.
+1.  There is an accompanying **video** for this project.  
+1.  First, we create a model with the generate command.  Open up a terminal and cd into your rps_crud folder and issue the following command at your terminal prompt:
+````
+rails generate model round computer_move:string player_move:string outcome:string
+````
+1.  Now to create the table issue the following command at your terminal prompt:
+````
+rails db:migrate
+````
+1.  You now have a model (a database table) named Round.
+1.  Follow the accompanying **video** and our [CRUD With Ruby Guide](https://guides.firstdraft.com/crud-with-ruby.html) to complete the project.
